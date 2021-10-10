@@ -36,6 +36,6 @@
   This project does not require any specific tests.  If the user wishes to try the application but already has a readme file, the user should preserve a copy of that readme file somewhere else to use if unsatisfied with the file produced.
   
   ## Questions
-  [GitHub Profile](github.com/cabralwilliams)
+  [GitHub Profile](http://github.com/cabralwilliams)
   
   For any questions concerning this application, please contact me at cabral.williams@gmail.com.
