@@ -53,10 +53,16 @@ function init() {
             .then(readmeObject => {
                 var fileData = generateMarkdown(readmeObject);
                 console.log(fileData);
+                fs.writeFile("./README.md",fileData, err => {
+                    console.log(err);
+                });
             });
         } else {
             var fileData = generateMarkdown(readmeObject);
             console.log(fileData);
+            fs.writeFile("./README.md",fileData, err => {
+                console.log(err);
+            });
         }
     });
 }
