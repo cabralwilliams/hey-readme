@@ -53,16 +53,63 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if(license === "None") {
     return "";
+  } else if(license === "The Unlicense") {
+    return `The content of this project is licensed under [${license}](${renderLicenseLink(license)}).  Please click [here](${renderLicenseLink(license)}) for more information about how you may use code in this project.`;
   } else {
-    return `The content of this project is licensed under the [${license} License](${renderLicenseLink(license)}).  Please click [here](${renderLicenseLink(license)}) for more information about how you may use code in this project.`;
+    return `The content of this project is licensed under the [${license}](${renderLicenseLink(license)}).  Please click [here](${renderLicenseLink(license)}) for more information about how you may use code in this project.`;
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const deployedLine = data.deployedProject ? `
+  ## Link
+  ${data.deployedUrl}
+  ` : "";
+  const licenseBadge = renderLicenseBadge(data.license[0]);
+  //const licenseLink = renderLicenseLink(data.license[0]);
+  const licenseSection = renderLicenseSection(data.license[0]);
   return `# ${data.title}
 
-`;
+  ${licenseBadge}
+
+  ## Description
+  ${data.description}
+  ${deployedLine}
+  ## Table of Contents
+  
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ## Installation
+  
+  ${data.installation}
+  
+  ## Usage
+  
+  ${data.usage}
+  
+  ## License
+  
+  ${licenseSection}
+
+  ## Contributing
+
+  ${data.contributing}
+  
+  
+  ## Tests
+  
+  ${data.tests}
+  
+  ## Questions
+  [GitHub Profile](github.com/${data.username})
+  
+  For any questions concerning this application, please contact me at ${data.email}.`;
 }
 
 module.exports = generateMarkdown;

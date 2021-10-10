@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const { questionOb, questionObDefault, getTableOfContents, questionConfirm, questionChoice, } = require('./utils/helperFunctions');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 
@@ -15,6 +16,7 @@ const questions = [
     questionChoice("license","Select a license from the list below to cover this project.  If you do not wish for the project to be covered by a specific license, choose 'None'.",["GNU AGPLv3","GNU GPLv3","GNU LGPLv3","Mozilla Public License 2.0","Apache License 2.0","MIT License","Boost Software License 1.0","The Unlicense","None"],true),
     questionObDefault("contributing","Please provide guidelines for how developers should contribute to the project.","This project adheres to the [Contributor Covenant](https://www.contributor-covenant.org/)."),
     questionObDefault("tests","What tests do you want to pass on to users to help them understand the project?","This section will be completed later."),
+    questionOb("username","What is your GitHub username?",true),
     questionOb("email","At what email address do you wish for users to contact you with questions about your application?",true),
     questionConfirm("deployedProject","Is the project deployed?")
 ];
@@ -46,9 +48,16 @@ function init() {
             .then(deployedUrl => {
                 readmeObject.deployedUrl = deployedUrl.deployedUrl;
                 console.log(readmeObject);
+                return readmeObject;
+            })
+            .then(readmeObject => {
+                var fileData = generateMarkdown(readmeObject);
+                console.log(fileData);
             });
+        } else {
+            var fileData = generateMarkdown(readmeObject);
+            console.log(fileData);
         }
-        return readmeObject;
     });
 }
 
