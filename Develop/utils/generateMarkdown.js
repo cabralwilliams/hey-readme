@@ -62,6 +62,7 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const demonstrationVideo = `https://watch.screencastify.com/v/x9eDj5se6rWPQsGFf0OS`;
   const deployedLine = data.deployedProject ? `
   ## Link
   ${data.deployedUrl}
@@ -92,6 +93,8 @@ function generateMarkdown(data) {
   ## Usage
   
   ${data.usage}
+
+  [Demonstration Video](${demonstrationVideo})
   
   ## License
   

@@ -3,7 +3,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  This project is a node.js-based project that will create a readme file for a project based on the user's responses to prompted questions.
+  This project takes in user input about the project details and then produces a readme.md file based on the user's responses.
   
   ## Table of Contents
   
@@ -16,11 +16,11 @@
   
   ## Installation
   
-  The application requires node.js to be installed on the user's machine, and the user must install the inquirer node package to enable the questions to be asked.
+  The user needs to have installed node.js and the node package inquirer in order for the program to function properly.
   
   ## Usage
   
-  The user must navigate to the develop folder of the repository and from the command line enter the command 'node index' or 'node index.js'.  From there, the user must answer the prompted questions.  After the last question is answered, the readme file will be automatically created.
+  Navigate to the develop folder on the command line and type the command 'node index' or 'node index.js'.
   
   ## License
   
@@ -33,7 +33,7 @@
   
   ## Tests
   
-  This project does not require any specific tests.  If the user wishes to try the application but already has a readme file, the user should preserve a copy of that readme file somewhere else to use if unsatisfied with the file produced.
+  The user should probably save any existing readme in another location before allowing the program to overwrite that file.
   
   ## Questions
   [GitHub Profile](http://github.com/cabralwilliams)

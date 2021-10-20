@@ -47,19 +47,19 @@ function init() {
             )
             .then(deployedUrl => {
                 readmeObject.deployedUrl = deployedUrl.deployedUrl;
-                console.log(readmeObject);
+                //console.log(readmeObject);
                 return readmeObject;
             })
             .then(readmeObject => {
                 var fileData = generateMarkdown(readmeObject);
-                console.log(fileData);
+                //console.log(fileData);
                 fs.writeFile("./README.md",fileData, err => {
                     console.log(err);
                 });
             });
         } else {
             var fileData = generateMarkdown(readmeObject);
-            console.log(fileData);
+            //console.log(fileData);
             fs.writeFile("./README.md",fileData, err => {
                 console.log(err);
             });
