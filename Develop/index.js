@@ -60,7 +60,7 @@ function init() {
         } else {
             var fileData = generateMarkdown(readmeObject);
             //console.log(fileData);
-            fs.writeFile("./README.md",fileData, err => {
+            fs.writeFile("../README.md",fileData, err => {
                 console.log(err);
             });
         }
