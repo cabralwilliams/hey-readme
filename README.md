@@ -1,9 +1,9 @@
-# Hey Readme
+# Show My Team
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
   ## Description
-  The project solicits user input to create a professional-looking README.md file.  This program significantly reduces the amount of repetitive work that is necessary to generate such a project file.
+  This project allows the user to input data to build an html view of her/his technology team.  Once completed, the user will have nicely styled view of the team and will be able to readily email or check out Github profiles of selected team members.
   
   ## Table of Contents
   
@@ -16,26 +16,24 @@
   
   ## Installation
   
-  To use the program, the user should have node.js installed on his or her machine.  The user could then clone the repository (or individually copy the files) but then would have to make sure that inquirer is installed as a dependency.  (If inquirer is not installed, the user would have to enter either 'npm install inquirer' or 'npm i inquirer' from the command line while in the project folder.)
+  The user should clone this repository and then make sure that the node packages inquirer and jest are installed.  Jest should be installed as a dev dependency.
   
   ## Usage
   
-  The user would have to navigate to the develop folder on the command line and enter either 'node index' or 'node index.js'.  From there, the user would answer each of the prompted questions, and the program will generate the README.md file in the develop folder.  If the user wishes to move the file to another location (e.g. if the README file is for a different project), the reader would be free to do so without changing this application's current README (this!).
-
-  [Demonstration Video](https://watch.screencastify.com/v/x9eDj5se6rWPQsGFf0OS)
+  Once the project files are successfully cloned and the aforementioned node packages are correctly installed, the user needs to run the command 'node index.js' or 'node index' from the root directory.  Following this, the user needs to answer the questions that are prompted.
   
   ## License
   
-  The content of this project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  Please click [here](https://opensource.org/licenses/MIT) for more information about how you may use code in this project.
+  The content of this project is licensed under [The Unlicense](http://unlicense.org/).  Please click [here](http://unlicense.org/) for more information about how you may use code in this project.
 
   ## Contributing
 
-  My contact information will be included at the end of this readme.  However, I'm not sure if any additional contribution is necessary for it at this time.
+  This particular project is more or less complete, but if anyone would like to contribute suggestions, please feel free to contact me with any of the methods that follow in this file.
   
   
   ## Tests
   
-  There are no specific tests for this application.  However, as a word of caution, this program will always overwrite the README.md file located in the Develop folder.  If you wish to compare documents, you should save any existing file in another location or under a different name before running this program.
+  This project utilized the jest package in building and validating the object's used.  If you wish to test the objects, use the command 'npm run test' at the root menu to see the tests that were passed.
   
   ## Questions
   [GitHub Profile](http://github.com/cabralwilliams)
